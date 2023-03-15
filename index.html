@@ -16,9 +16,36 @@
 </head>
 <body class="m-4">
     <h1>Employee Management System</h1>
-    <form id="empForm">
-        
-     
+    <form id="empForm">        
+        <div class="form-group">
+            <label for="formGroupExampleInput">8-Digit Employee ID</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Full Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput3">4-Digit Extension</label>
+            <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Another input">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Department</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>Administrative</option>
+              <option>Engineering</option>
+              <option>Executive</option>
+              <option>Marketing</option>
+              <option>Quality Assurance</option>
+              <option>Sales</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Employee</button>     
+
     </form>
 </body>
 </html>
