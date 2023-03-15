@@ -4,7 +4,7 @@ let btn          =  document.getElementById("submitButton");
 
 // FUNCTIONS
 // GET VALUES FROM EACH ELEMENTS
-saveValues = () => {
+saveValues = () => {    
     var employeeID   =  document.getElementById("formGroupExampleInput").value;
     var fullName     =  document.getElementById("formGroupExampleInput2").value;
     var extension    =  document.getElementById("formGroupExampleInput3").value;
