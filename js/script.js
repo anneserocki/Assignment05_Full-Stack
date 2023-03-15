@@ -21,5 +21,5 @@ saveValues = () => {
 // EVENT LISTENER
 // LOAD FORM AND PREVENT THE BROWSER'S DEFAULT BEHAVIOR 
 employeeForm.addEventListener('load', helper = () => document.preventDefault(), false);
-// FOR SAVING ALL VALUES IN THE FORM
+// GET VALUES AND SHOW THEM
 btn.addEventListener("click", saveValues, false)
