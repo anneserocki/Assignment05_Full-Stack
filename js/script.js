@@ -4,22 +4,25 @@ let btn          =  document.getElementById("submitButton");
 
 // FUNCTIONS
 // GET VALUES FROM EACH ELEMENTS
-saveValues = () => {    
+getValues = (e) => {
+    e.preventDefault(); // This is a must!!  Note: must have the parameter "e", If no, console will show nothing.    
     var employeeID   =  document.getElementById("formGroupExampleInput").value;
     var fullName     =  document.getElementById("formGroupExampleInput2").value;
     var extension    =  document.getElementById("formGroupExampleInput3").value;
     var email        =  document.getElementById("exampleInputEmail1").value;
     var department   =  document.getElementById("exampleFormControlSelect1").value;
-    // SHOW RESULTS THROUGH CONSOLE
+
+// SHOW RESULTS THROUGH CONSOLE 
     console.log(`ID: ${employeeID}`);
     console.log(`Name: ${fullName}`);
     console.log(`Extension: ${extension}`);
     console.log(`Email: ${email}`);
-    console.log(`Department: ${department}`);
+    console.log(`Department: ${department}`);    
 }
 
 // EVENT LISTENER
-// LOAD FORM AND PREVENT THE BROWSER'S DEFAULT BEHAVIOR 
-employeeForm.addEventListener('load', helper = () => document.preventDefault(), false);
+// PREVENT THE BROWSER'S DEFAULT BEHAVIOR ----This is used while the browser loaded
+window.addEventListener('load', helper = (e) => e.preventDefault(), false);  
 // GET VALUES AND SHOW THEM
-btn.addEventListener("click", saveValues, false)
+employeeForm.addEventListener("submit", getValues, false)
+// btn.addEventListener("click", getValues, false)  // 在提交表单时还是用submit form的形式提交，不要用button click，否则对字段有效性的验证无效
